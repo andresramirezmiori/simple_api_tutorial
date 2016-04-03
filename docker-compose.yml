@@ -1,6 +1,6 @@
 django:
-  #image: andresramirezmiori/simple_api_django
   build: ./django/.
+  image: andresramirezmiori/simple_api_django
   command: python /usr/bin/supervisord -n
   ports:
    - "8000"
