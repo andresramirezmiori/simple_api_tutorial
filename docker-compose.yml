@@ -1,19 +1,11 @@
 django:
   build: ./django/.
-  image: andresramirezmiori/simple_api_django
-  command: python /usr/bin/supervisord -n
   ports:
    - "8000"
   volumes:
    - ./django:/code
-  depends_on:
+  links:
    - db
 db:
   image: postgres:9.4
-  container_name: db
-  volumes:
-   - ./postgres/db-data:/var/lib/postgresql/data
-  env_file:
-   - ./postgres/database.env  
-#command: mysqld
 
