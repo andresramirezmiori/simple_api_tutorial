@@ -1,3 +1,4 @@
 /postgres/db-data/
 /django/api_example/
 /django/supervisord.log
+/django/supervisord.pid
