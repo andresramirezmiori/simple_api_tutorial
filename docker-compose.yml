@@ -8,4 +8,6 @@ django:
    - db
 db:
   image: postgres:9.4
+  env_file:
+   - ./postgres/database.env
 
